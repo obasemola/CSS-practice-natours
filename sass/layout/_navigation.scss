@@ -1,9 +1,5 @@
 .navigation {
 
-  &__checkbox {
-    
-  }
-
   &__button {
     background-color: $color-white;
     height: 7rem;
@@ -139,6 +135,6 @@
 
   &__checkbox:checked + &__button &__icon::after {
     top: 0;
-    transform: rotate(-135deg); 
+    transform: rotate(-135deg);
   }
 }
