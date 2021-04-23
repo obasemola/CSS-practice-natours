@@ -8,7 +8,27 @@
 
 html {
   //Thie defines what 1rem is
+  //making the rem calculations easier, better to use 10px as the root font-size and better to use percentate instead of px.
+  // so 10px/16px (default font-size) = 62.5%
   font-size: 62.5%;
+
+  // @include respond (phone) {
+  //   font-size: 50%; //1rem = 8px, 8px/16 = 50%
+  // } since tab-port's font-size is the same as phone's, better to use only the tab-port's font-size
+  //Always put the larger media queries before the smaller ones so that the smaller one would override the larger one - 
+  // Otherwise, when the breakpoint hits the smaller media query, it will apply, then then it would hit the large one next, and the larger one would also apply
+
+  @include respond (tab-land) {
+    font-size: 56.25%; //1rem = 9px, 9px/16 = 56.25%
+  }
+
+  @include respond (tab-port) {
+    font-size: 50%; //1rem = 8px, 8px/16 = 50%
+  }
+
+  @include respond (big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16 = 75
+  }
 }
 
 body {
