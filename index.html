@@ -72,10 +72,27 @@
                         <a href="#" class="btn-text">Learn more &rarr;</a>
                     </div>
                     <div class="col-1-of-2">
+                        <!-- sizes is calculated by dividing the width of each image at each breakpoint with the value of the breakpoint -->
                         <div class="composition">
-                            <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+                            <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w" alt="Photo 1"
+                                sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                                class="composition__photo composition__photo--p1"
+                                src="img/nat-1-large.jpg">
+
+                            <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w" alt="Photo 2"
+                                sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                                class="composition__photo composition__photo--p2"
+                                src="img/nat-2-large.jpg">
+
+                            <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w" alt="Photo 3"
+                                sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                                class="composition__photo composition__photo--p3"
+                                >
+
+
+                            <!-- <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
                             <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                            <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                            <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3"> -->
                         </div>
                     </div>
                 </div>
@@ -317,7 +334,11 @@
         </main>
         <footer class="footer">
             <div class="footer__logo-box">
-                <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+                <!-- art direction and density switching -->
+                <picture class="footer__logo">
+                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+                    <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" src="img/logo-green-2x.png">
+                </picture>
             </div>
             <div class="row">
                 <div class="col-1-of-2">
@@ -347,7 +368,7 @@
                 <div class="popup__right">
                     <a href="#section-tours" class="popup__close">&times;</a>
                     <h2 class="heading-secondary u-margin-bottom-medium">Start booking now</h2>
-                    <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
+                    <h3 class="heading-tertiary heading-tertiary-responsive u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
                     <p class="popup__text">
                         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
                         "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et 
