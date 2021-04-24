@@ -184,6 +184,10 @@
     &:hover &__side--front {
       transform: rotateY(0);
     }
+
+    &__details {
+      padding: 0 3rem;
+  }
   
     //BACK SIDE STYLING
     &__cta {
@@ -200,7 +204,7 @@
     }
   
     &__price-value {
-      font-size: 6rem;
+      font-size: 4rem;
     }
   }
 }
